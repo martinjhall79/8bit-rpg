@@ -16,7 +16,7 @@ public class PositionUtility
     }
 	
     // Convert index to x and y position
-    public static void CalculatePos(int index, int width, out int x, out int y)
+    public static void CalculatePosition(int index, int width, out int x, out int y)
     {
         x = index % width;
         y = index / width;

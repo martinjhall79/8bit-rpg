@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C4B5FECE-6E57-546A-2D6F-A8194DBEBD01}</ProjectGuid>
+    <ProjectGuid>{A59AE096-451F-EC6D-C762-D27217F70381}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\RandomMapGen\Scripts\Map.cs" />
+     <Compile Include="Assets\RandomMapGen\Scripts\MapMovementController.cs" />
      <Compile Include="Assets\RandomMapGen\Scripts\MoveCamera.cs" />
      <Compile Include="Assets\RandomMapGen\Scripts\PixelPerfectCamera.cs" />
+     <Compile Include="Assets\RandomMapGen\Scripts\Player.cs" />
      <Compile Include="Assets\RandomMapGen\Scripts\PositionUtility.cs" />
      <Compile Include="Assets\RandomMapGen\Scripts\RandomMapTester.cs" />
      <Compile Include="Assets\RandomMapGen\Scripts\Tile.cs" />

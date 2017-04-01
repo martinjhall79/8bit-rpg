@@ -129,17 +129,15 @@ public class RandomMapTester : MonoBehaviour
         // Set player game object to be inside map container, where all other game objects are
         player.transform.SetParent(mapContainer.transform);
 
-        // Set player next to castle at game start
-        PositionUtility.CalculatePos(map.castleTile.id, map.columns, out tmpX, out tmpY);
+        // Set player starting position next to castle at start
+        var controller = player.GetComponent<MapMovementController>();
+        controller.map = map;
+        controller.tileSize = tileSize;
+        controller.MoveTo(map.castleTile.id);
 
-        Debug.Log("tmpX: " + tmpX + " " + "tmpY: " + tmpY);
-        Debug.Log("CastleTile.id: " + map.castleTile.id);
-        // Multiply x and y position by tile size
-
-        tmpX *= (int)tileSize.x;
-        tmpY *= -(int)tileSize.y;
-
-        player.transform.position = new Vector3(tmpX, tmpY, 0);
+        // Camera follows player
+        var moveScript = Camera.main.GetComponent<MoveCamera>();
+        moveScript.target = player;
     }
 
     void ClearMapContainer()
@@ -157,7 +155,7 @@ public class RandomMapTester : MonoBehaviour
         var camPos = Camera.main.transform.position;
         var width = map.columns;
 
-        PositionUtility.CalculatePos(index, width, out tmpX, out tmpY);
+        PositionUtility.CalculatePosition(index, width, out tmpX, out tmpY);
 
         camPos.x = tmpX * tileSize.x;
         camPos.y = -tmpY * tileSize.y;
