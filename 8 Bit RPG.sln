@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{4ACF5553-5D8F-91F1-190B-2A1A043688A7}") = "8 Bit RPG", "Assembly-CSharp.csproj", "{C4B5FECE-6E57-546A-2D6F-A8194DBEBD01}"
+EndProject
+Project("{4ACF5553-5D8F-91F1-190B-2A1A043688A7}") = "8 Bit RPG", "Assembly-CSharp-Editor.csproj", "{4453D026-ECA3-AD77-7C25-45EC0F95FA78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4B5FECE-6E57-546A-2D6F-A8194DBEBD01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B5FECE-6E57-546A-2D6F-A8194DBEBD01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B5FECE-6E57-546A-2D6F-A8194DBEBD01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B5FECE-6E57-546A-2D6F-A8194DBEBD01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4453D026-ECA3-AD77-7C25-45EC0F95FA78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4453D026-ECA3-AD77-7C25-45EC0F95FA78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4453D026-ECA3-AD77-7C25-45EC0F95FA78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4453D026-ECA3-AD77-7C25-45EC0F95FA78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
