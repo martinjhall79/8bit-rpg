@@ -19,6 +19,12 @@ public class MapMovementController : MonoBehaviour
     public float moveTime;
     // Limit movement to valid tiles
     public int[] blockedTileTypes;
+    // Trigger events when player lands on tile, informing what the tile is
+    public delegate void TileAction(int Type);
+    public TileAction tileActionCallback;
+    // Trigger event when player starts moving
+    public delegate void MoveAction();
+    public MoveAction moveActionCallback;
 
     private Vector2 startPos;
     private Vector2 endPos;
@@ -28,11 +34,18 @@ public class MapMovementController : MonoBehaviour
     private int tmpX;
     private int tmpY;
 
+
     public void MoveTo(int index, bool animate = false)
     {
         // Only move if movement valid
         if (!CanMove(index)) {
             return;
+        }
+
+        // Player can move, trigger beginning movement event
+        if (moveActionCallback != null)
+        {
+            moveActionCallback();
         }
 
         currentTile = index;
@@ -46,9 +59,14 @@ public class MapMovementController : MonoBehaviour
 
         var newPos = new Vector3(tmpX, tmpY, 0);
         // Move GameObject to new position
-        if (animate == false)
+        if (!animate)
         {
             transform.position = newPos;
+            // Trigger event when player lands on this tile
+            if (tileActionCallback != null)
+            {
+                tileActionCallback(map.tiles[currentTile].autotileID);
+            }
         }
         else {
             // Animate movement
@@ -87,8 +105,12 @@ public class MapMovementController : MonoBehaviour
             {
                 moving = false;
                 transform.position = endPos;
+                // When animation complete, trigger event when player lands on this tile
+                if (tileActionCallback != null)
+                {
+                    tileActionCallback(map.tiles[currentTile].autotileID);
+                }
             }
-
             transform.position = Vector2.Lerp(startPos, endPos, moveTime / speed);
         }
     }

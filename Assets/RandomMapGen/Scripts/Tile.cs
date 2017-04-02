@@ -19,6 +19,10 @@ public class Tile
     public int id = 0;
     public Tile[] neighbours = new Tile[4];
     public int autotileID;
+    // Fog of war
+    public bool visited;
+    // Fog of war - Autotile id for tiles not visited
+    public int fowAutoTileID;
 
     public void AddNeighbour(Sides side, Tile tile)
     {
@@ -66,6 +70,21 @@ public class Tile
         }
 
         autotileID = Convert.ToInt32(sideValues.ToString(), 2);
+    }
 
+    // Track if tile has been visited or not and tag tile accordingly
+    public void CalculateFoWAutotileID()
+    {
+        var sideValues = new StringBuilder();
+
+        foreach (Tile tile in neighbours) {
+            if (tile == null) {
+                sideValues.Append("1");
+            } else {
+                sideValues.Append(tile.visited ? "0" : "1");
+            }
+        }
+
+        fowAutoTileID = Convert.ToInt32(sideValues.ToString(), 2);
     }
 }

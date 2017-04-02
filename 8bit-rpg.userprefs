@@ -1,12 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\RandomMapGen\Scripts\MapMovementController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\RandomMapGen\Editor\RandomMapTesterEditor.cs">
     <Files>
-      <File FileName="Assets\RandomMapGen\Scripts\MapMovementController.cs" Line="106" Column="3" />
+      <File FileName="Assets\RandomMapGen\Scripts\MapMovementController.cs" Line="27" Column="23" />
       <File FileName="Assets\RandomMapGen\Scripts\PositionUtility.cs" Line="19" Column="41" />
-      <File FileName="Assets\RandomMapGen\Scripts\RandomMapTester.cs" Line="140" Column="36" />
-      <File FileName="Assets\RandomMapGen\Scripts\Player.cs" Line="18" Column="40" />
+      <File FileName="Assets\RandomMapGen\Scripts\RandomMapTester.cs" Line="177" Column="46" />
+      <File FileName="Assets\RandomMapGen\Scripts\Player.cs" Line="54" Column="23" />
       <File FileName="Assets\RandomMapGen\Scripts\MoveCamera.cs" Line="39" Column="39" />
+      <File FileName="Assets\RandomMapGen\Scripts\Tile.cs" Line="84" Column="42" />
+      <File FileName="Assets\RandomMapGen\Editor\RandomMapTesterEditor.cs" Line="37" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

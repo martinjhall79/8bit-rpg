@@ -30,6 +30,14 @@ public class RandomMapTesterEditor : Editor
             }
         }
 
+        if (GUILayout.Button("Reset"))
+        {
+            if (Application.isPlaying)
+            {
+                script.Reset();
+            }
+        }
+
     }
 
 }
